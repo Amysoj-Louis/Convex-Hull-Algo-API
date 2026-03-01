@@ -1,13 +1,21 @@
-# Convex Hull Algo API
+# Convex Hull Geo-Computation API
 
-A Flask API for computing the convex hull of geographical coordinates (latitude and longitude) using efficient geometric algorithms.
+A specialized Flask-based REST API designed for high-performance computation of the convex hull for sets of geographical coordinates (Latitude/Longitude).
 
-## Features
-- **Geo-Computation**: Calculate the minimum bounding polygon for a set of GPS points.
-- **RESTful API**: Simple POST endpoint for coordinate processing.
-- **Visualization Ready**: Returns structured data suitable for mapping tools like Leaflet or Google Maps.
+## 🌍 Project Overview
+The **Convex Hull Algo API** provides a precise geometric solution for finding the minimum bounding polygon that encloses a set of GPS points. It utilizes **Andrew's Monotone Chain Algorithm**, delivering an efficient O(n log n) time complexity. This utility is ideal for mapping applications, spatial analysis, and geographical fencing where identifying the outer boundaries of a point cluster is required.
 
-## Tech Stack
-- Python
-- Flask
-- Scipy/Numpy (Algorithm logic)
+## ✨ Key Features
+- **Andrew's Monotone Chain Implementation**: Efficient geometric logic for calculating the convex hull, optimized for accuracy and speed.
+- **Geographical Point Processing**: Specifically designed to handle (Lat, Lng) tuples for direct integration with mapping libraries.
+- **RESTful POST Endpoint**: A simple, robust `/convexhull` endpoint accepting point sequences via form data.
+- **Mapping-Ready Output**: Returns structured JSON data suitable for immediate visualization in Leaflet, Google Maps, or MapLibre GL.
+- **Collinear Point Handling**: Built-in logic to exclude redundant collinear points, ensuring a minimal bounding polygon.
+
+## 🛠️ Tech Stack
+- **Backend**: Python 3.10, Flask
+- **Geometric Logic**: Custom implementation of monotone chain algorithm
+- **Data Handling**: JSON, Typing
+- **Deployment**: Vercel-ready serverless architecture
+
+*“Defining the boundaries of geographical point clusters with mathematical precision.”*
